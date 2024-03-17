@@ -1,0 +1,1 @@
+D:/VsCode/Code.exe [file name] -n[line number]
