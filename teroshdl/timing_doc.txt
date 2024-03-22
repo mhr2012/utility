@@ -1,0 +1,56 @@
+--! **Title:**
+--! This example uses as symbol to extract the comment "!". It
+--! This section is waveform:
+--! { signal:[
+--!   {name:"clk" , wave:"P......"},
+--!   {name:"SDA" , wave:"X......" },
+--!   {name:"SDO" , wave:"10100110"},
+--!   {name:"SDO" , wave:"1010.1..10"},
+--!   {'name': 'A', 'wave': '0..1..01.', 'node': '...a.....'},
+
+--!   {name:'bus',  wave: 'x.==.=x', data: ['head', 'body', 'tail']},
+--! ]
+--! }
+--! {'signal': [
+--!         {'name': 'A', 'wave': '0..1..01.', 'node': '...a..c..'},
+--!         {'name': 'B', 'wave': '101..0...', 'node': '.e..b.d..q'}],
+--!      'edge': ['a<->c t1','e+b t3','d|->q']
+--!     }
+
+--! {'signal': [
+--!         {'name': 'A', 'wave': '0..1..01.', 'node': '...a.....'},
+--!         {'name': 'B', 'wave': '101..0...', 'node': '.....b...'}],
+--!      'edge': ['a~>b']
+--!     }
+
+--! {'signal': [
+--!         {'name': 'A', 'wave': 'x3...x'},
+--!         {'name': 'B', 'wave': 'x6.6.x'}],
+--!      'edge': ['[0^:1]+[0^:5] $t_1
+--!               '[1^:1]<->[1^:3] $t_o
+--!               '[0^:3]-[1v:3]{gray,:}',
+--!              ]}
+
+--! ***title5:
+--! -----------------------------------------------------------------***
+--! {reg: [
+--!    { "name": "IPO",   "bits": 8, "attr": "RO" },
+--!    {                  "bits": 7 },
+--!     { "name": "BRK",   "bits": 5, "attr": "RW", "type": 4 },
+--!     { "name": "CPK",   "bits": 1 },
+--!     { "name": "Clear", "bits": 3 },
+--!     { "bits": 8 }
+--!]}
+
+--! { signal: [
+--!   { name: "clk",         wave: "p.....|..." },
+--!   { name: "Data",        wave: "x.345x|=.x", data: ["head", "body", "tail", "data"] },
+--!   { name: "Request",     wave: "0.1..0|1.0" },
+--!   {},
+--!   { name: "Acknowledge", wave: "1.....|01." }
+--! ],
+--!  head:{
+--!     text:'WaveDrom example',
+--!     tick:0,
+--!     every:1
+--!   }}
